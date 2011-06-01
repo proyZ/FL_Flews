@@ -1,12 +1,9 @@
-// Fltk opengl image loading helper functions
-// Author: Daniel Barrero    (daniel.barrero@polymtl.ca)
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <FL/Fl.H>
 #include <FL/Fl_Shared_Image.H>
-#include "gl_image.hpp"
+#include "FL/gl_image.hpp"
 
 #define GL_CHECK_ERROR(str)                                        \
 {                                                                  \

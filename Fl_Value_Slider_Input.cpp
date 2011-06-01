@@ -42,10 +42,10 @@ void Fl_Value_Slider_Input::draw() {
   if (damage()&~FL_DAMAGE_CHILD)  input.clear_damage(FL_DAMAGE_ALL);
   input.box(box());
   input.color(FL_WHITE, selection_color());
-  input.draw();
+  input.doDraw();
   input.resize(X,Y,W,H);
   input.clear_damage();
-//  if (horizontal())   input.draw();
+//  if (horizontal())   input.doDraw();
   clear_damage();
   draw_box(box(),sxx,syy,sww,shh,color());
   sxx+=border_size;
@@ -100,11 +100,30 @@ int Fl_Value_Slider_Input::handle(int event) {
            case FL_UNFOCUS:
 	       redraw();
 	       break;
+	   case FL_KEYBOARD:
+	       switch (Fl::event_key()) {
+ 	          case FL_Up:
+                     if (!horizontal()) indrag=1 ;
+		     break;
+	          case FL_Down:
+                     if (!horizontal()) indrag=1 ;
+		     break;
+ 	          case FL_Left:
+                     if (horizontal()) indrag=1 ;
+		     break;
+	          case FL_Right:
+                     if (horizontal()) indrag=1 ;
+		     break;
+	        }
+	        break;
 	    default:
 	      sldrag=0;
 	  }
-          input.type(step()>=1.0 ? FL_INT_INPUT : FL_FLOAT_INPUT);
-          return input.handle(event);
+	  if(!indrag)
+	  {
+            input.type(step()>=1.0 ? FL_INT_INPUT : FL_FLOAT_INPUT);
+            return input.handle(event);
+	  }
   } 
   switch (event) {
   case FL_PUSH:

@@ -19,6 +19,17 @@ class  Fl_Multi_Value_Slider : public Fl_Slider {
 
     uchar textfont_, textsize_;
     unsigned textcolor_;
+    void draw_bg(int X, int Y, int W, int H);
+
+#if FL_MAJOR_VERSION==1 && FL_MINOR_VERSION==3
+// draw is now private on fltk 1.3
+protected:
+#else
+// draw is public on 1.1.x
+public:
+#endif
+   FL_EXPORT void draw();
+    
 public:
     double normval(double v);
     int findseg(double v);
@@ -28,8 +39,6 @@ public:
     double * getsegments(int &n);
 
     void draw_peg(int X,int Y,int W,int H,double val, int t=0);
-    void draw_bg(int X, int Y, int W, int H);
-    void draw();
 
     int handle(int event, int X, int Y, int W, int H);
     int handle(int);

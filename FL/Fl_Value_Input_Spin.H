@@ -22,9 +22,33 @@ private:
   static FL_EXPORT void repeat_callback(void *);
   FL_EXPORT void increment_cb(); 
   
+    
+#if FL_MAJOR_VERSION==1 && FL_MINOR_VERSION==3
+// draw is now private on fltk 1.3
+protected:
+#else
+// draw is public on 1.1.x
 public:
-    Fl_Input input;
+#endif
     FL_EXPORT void draw();
+
+public:
+    // FUGLY HACK: since fltk 1.3 made the draw method private on now this ugly hack
+    // is needed to acces the input widget draw method, this is temporary until
+    // I get time to rewrite these composite widgets using an Fl_Group 
+    // (but then they wouldn't show nicely on fluid :-(
+    class Fl_Value_Slider_Input_Input: public Fl_Input
+    {
+      public:
+         Fl_Value_Slider_Input_Input(int x,int y,int w,int h,const char *l = 0):
+	         Fl_Input(x,y,w,h,l) {}
+	
+         void doDraw() { draw(); }
+    };
+
+    Fl_Value_Slider_Input_Input input;
+    
+
     FL_EXPORT int handle(int);
     FL_EXPORT void resize(int,int,int,int);
     FL_EXPORT Fl_Value_Input_Spin(int x,int y,int w,int h, const char *l = 0);

@@ -34,8 +34,17 @@ private:
                         float rotx=0.0,float roty=0.0,float  rotz=0.0);
   FL_EXPORT void draw_solid_ball(float radius,int slices,int stacks);
   FL_EXPORT void draw_wire_ball(float radius,int slices,int stacks);
+
+#if FL_MAJOR_VERSION==1 && FL_MINOR_VERSION==3
+// draw is now private on fltk 1.3
+protected:
+#else
+// draw is public on 1.1.x
 public:
-    FL_EXPORT void draw();
+#endif
+   FL_EXPORT void draw();
+
+public:
     FL_EXPORT void handle_drag(double v=0.0);
     FL_EXPORT void handle_release();
     FL_EXPORT int handle(int);

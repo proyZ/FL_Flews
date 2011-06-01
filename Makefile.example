@@ -1,0 +1,9 @@
+all: testflews
+
+testflews.cpp:testflews.fl
+	fluid -c $<
+
+
+testflews: testflews.cpp
+	gcc testflews.cpp -o testflews -I /usr/include/fltk-1.1 -lflews -lfltk -L /usr/lib/fltk-1.1
+

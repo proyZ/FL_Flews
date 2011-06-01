@@ -421,7 +421,7 @@ s,@ECHO_T@,,;t t
 s,@LIBS@,-lfltk ,;t t
 s,@CC@,gcc,;t t
 s,@CFLAGS@,-g -O2 -I/usr/X11R6/include,;t t
-s,@LDFLAGS@,-g -O2 -L/usr/X11R6/lib,;t t
+s,@LDFLAGS@,-g -O2 -L/usr/X11R6/lib64,;t t
 s,@CPPFLAGS@,,;t t
 s,@ac_ct_CC@,gcc,;t t
 s,@EXEEXT@,,;t t

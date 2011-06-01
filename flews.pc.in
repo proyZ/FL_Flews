@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: flews
+Description: A set of extended Widgets for the excellent FLTK library
+Version: @PACKAGE_VERSION@
+Libs: -L${libdir} -lflews
+Cflags: -I${includedir}/FL

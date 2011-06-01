@@ -9,10 +9,7 @@ This will create the libflews.a library and the testflews demo program.
 To use this library you can simply use the libflews.a library or add the 
 specific widgets source files you want to use to your proyects.
 
-The current widgets in the library (v0.3) work exactly in the same way
+The current widgets in the library (v0.3.1) work exactly in the same way
 as the corresponding default widgets, only now you can either edit the text in
 the valuator or have and extended interaction features. see the testflews demo 
 program for an example.
-
-
-

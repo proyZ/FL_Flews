@@ -25,8 +25,8 @@ SHELL	=	/bin/sh
 ARFLAGS	=	crvs
 CFLAGS	=	-g -O2 -I/usr/X11R6/include  -I./
 CXXFLAGS =	-g -O2 -I/usr/X11R6/include -I./
-LIBS	=	-lfltk  -lXext -lX11 -lm
-LDFLAGS	=	-g -O2 -L/usr/X11R6/lib
+LIBS	=	-lfltk  -lXext -lX11 -lm `fltk-config --ldflags`
+LDFLAGS	=	-g -O2 -L/usr/X11R6/lib64
 
 #
 # Rules...

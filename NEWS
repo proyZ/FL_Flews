@@ -1,0 +1,30 @@
+CHANGES IN VERSION 0.3.1
+  Allow flews to work with fltk-1.3 (quick and dirty fixes until rewriting the
+  value  composited widgets using Fl_Group takes place, (also until figuring out
+  how to make fluid show slider properties with the composited fl_group
+  widgets). 
+  
+  FL_Value_Slider: bug fix: default behavior using arrow keys is now to move to
+  increment/decrement the value instead of moving to the next
+CHANGES IN VERSION 0.3
+ added widgets:
+  Fl_Pack_2D
+  Fl_Multi_Value_Slider
+ added helper functions:
+  gl_image
+ Replaced sgi's trackball implementation by:
+   Fl_Quaternion class
+   fl_trackball
+ 
+CHANGES IN VERSION 0.2
+ added widgets:
+  Fl_Spin
+  Fl_Ball
+
+CHANGES IN VERSION 0.1
+ First public version, 
+ Has the following widgets:
+  Fl_Value_Slider_Input
+  Fl_Value_Input_Spin
+  
+Dany

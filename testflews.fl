@@ -1,5 +1,5 @@
 # data file for the Fltk User Interface Designer (fluid)
-version 1.0103 
+version 1.0300 
 header_name {.h} 
 code_name {.cpp}
 decl {\#include <stdio.h>} {} 
@@ -13,7 +13,7 @@ Function {} {open
 } {
   Fl_Window {} {
     label testflews open
-    xywh {334 23 640 500} color 52 resizable visible
+    xywh {334 47 640 500} type Double color 52 resizable visible
   } {
     Fl_Group {} {open
       xywh {5 5 439 189} box ENGRAVED_FRAME
@@ -67,7 +67,7 @@ Function {} {open
       xywh {6 197 299 140} box ENGRAVED_FRAME
     } {
       Fl_Box {} {
-        label Fl_Value_Input_Spin
+        label Fl_Value_Input_Spin selected
         xywh {6 197 150 25} align 64
       }
       Fl_Value_Input {} {
@@ -128,7 +128,7 @@ Function {} {open
         label {The Fl_Ball widget doesn't requires a 3d library:}
         callback {float rx,ry,rz;
 o->getrot(rx,ry,rz);
-fprintf(stderr,"rx: %f ry:%f rz:%f\\n",rx,ry,rz);} selected
+fprintf(stderr,"rx: %f ry:%f rz:%f\\n",rx,ry,rz);}
         xywh {21 401 94 88} box ROUND_DOWN_BOX color 52 selection_color 42 labelsize 10 align 197 minimum -360 maximum 360 step 1
         class Fl_Ball
       }
@@ -156,12 +156,12 @@ fprintf(stderr,"rx: %f ry:%f rz:%f\\n",rx,ry,rz);} selected
       Fl_Box {} {
         label {FLEWS 
 Extended set of valuators for FLTK
-V 0.3}
+V 0.3.1}
         tooltip {Created by: Daniel Barrero (http://dbarrero.tripod.com)} xywh {451 3 178 125} box SHADOW_BOX color 7 selection_color 52 labelfont 1 labelsize 15 align 209
       }
       Fl_Box {} {
         label {Created by: Daniel Barrero
- http://dbarrero.tripod.com}
+ http://danielbarrero.com}
         xywh {473 87 141 32} labelsize 10 labelcolor 176 align 64
       }
     }
@@ -175,18 +175,18 @@ V 0.3}
         class Fl_Multi_Value_Slider
       }
       Fl_Slider {} {
-        xywh {314 236 264 16} type {Horz Knob} box FLAT_BOX selection_color 59 labelcolor 0
+        xywh {314 236 264 16} type {Horz Knob} box FLAT_BOX selection_color 59
         code0 {o->splitseg(0);}
         class Fl_Multi_Value_Slider
       }
       Fl_Slider {} {
-        xywh {316 255 262 21} type Horizontal color 50 selection_color 4 labelcolor 0
+        xywh {316 255 262 21} type Horizontal color 50 selection_color 4
         code0 {o->splitseg(0);o->splitseg(1);}
         code1 {o->middlevals(0);}
         class Fl_Multi_Value_Slider
       }
       Fl_Slider {} {
-        xywh {606 203 21 132} box PLASTIC_DOWN_BOX selection_color 1 labelcolor 0
+        xywh {606 203 21 132} box PLASTIC_DOWN_BOX selection_color 1
         code0 {o->splitseg(0);o->splitseg(0);}
         code1 {o->splitseg(1);o->splitseg(0);}
         code2 {o->middlevals(0);}

@@ -1,6 +1,3 @@
-// Fltk opengl image loading helper functions
-// Author: Daniel Barrero    (daniel.barrero@polymtl.ca)
-
 #ifndef _GL_IMAGE_HPP_
 #define _GL_IMAGE_HPP_
 #include <FL/Fl_Shared_Image.H>

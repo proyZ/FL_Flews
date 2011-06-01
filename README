@@ -1,4 +1,4 @@
-README - Fl_flews Version 0.3
+README - Fl_flews Version 0.3.1
 ------------------------------------
 
 WHAT IS Fl_flews
@@ -51,9 +51,9 @@ AUTHORS
    Flews was created by:
 
       Daniel Barrero
-      <danybu@lycos.com , barrero@CERCA.UMontreal.CA>
-      http://members.tripod.com/dbarrero
-
+      < daniel.barrero@gmail.com, danybu@lycos.com >
+      http://danielbarrero.com
+      
     See testflews.fl for an example.
 
     A big thanks to everybody contributing to the development of Fltk, 
@@ -77,8 +77,8 @@ REPORT PROBLEMS
     If you have any problems using flews please don't hesitate to contact me:
 
       Daniel Barrero
-      <danybu@lycos.com , barrero@CERCA.UMontreal.CA>
-      http://members.tripod.com/dbarrero
+      < daniel.barrero@gmail.com, danybu@lycos.com >
+      http://danielbarrero.com
 
 
 RELATED INTERNET RESOURCES

@@ -17,9 +17,17 @@ private:
   uchar mouseobj;
   static FL_EXPORT void repeat_callback(void *);
   FL_EXPORT void increment_cb(); 
+
+#if FL_MAJOR_VERSION==1 && FL_MINOR_VERSION==3
+// draw is now private on fltk 1.3
+protected:
+#else
+// draw is public on 1.1.x
+public:
+#endif
+   FL_EXPORT void draw();
   
 public:
-    FL_EXPORT void draw();
     FL_EXPORT int handle(int);
     FL_EXPORT Fl_Spin(int x,int y,int w,int h, const char *l = 0);
 

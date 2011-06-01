@@ -25,7 +25,7 @@ SHELL	=	/bin/sh
 ARFLAGS	=	crvs
 CFLAGS	=	@CFLAGS@  -I./
 CXXFLAGS =	@CXXFLAGS@ -I./
-LIBS	=	@LIBS@ -lXext -lX11 -lm
+LIBS	=	@LIBS@ -lX11 -lm `fltk-config --ldflags`
 LDFLAGS	=	@LDFLAGS@
 
 #
