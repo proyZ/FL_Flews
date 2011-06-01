@@ -1,0 +1,8 @@
+TODO - Fl_flews Version 0.3
+--------------------------------
+- Clean up code for the Fl_Ball widget (Keep a permanent cache of the ball vertex array for the existance of the widget and only recalculate the array if tesselation changing functions are called)
+- Write full documentation for the widgets in the fltk style
+- write Fl_Quaternion, fl_trackball (independant of fl_ball) + gl_image demo...
+
+Daniel Barrero <danybu@lycos.com , daniel.barrero@polymtl.ca>
+

@@ -1,0 +1,96 @@
+README - Fl_flews Version 0.3
+------------------------------------
+
+WHAT IS Fl_flews
+
+    Fl_flews is a set of additional extended widgets for the excellent 
+    FLTK library.
+    
+    This library contains the following widgets:
+    
+    Fl_Value_Slider_Input : Similar to the Fl_Value_Slider widget
+                            with an added editable text field.
+
+    Fl_Value_Input_Spin :   Same functionality as the Fl_Value_Input widget
+                            extended with spin buttons and full editable input.					    
+    Fl_Spin :               A Spin button widget.
+    
+    Fl_Ball :               A 3D ball widget, Works as a virtual trackball,
+                            it's similar to the rotate widget of GLUI(see below)
+			    but doesn't requires a 3D library (it uses the
+                            included Fl_Quaternion class for calculating the
+                            ball orientation)
+			    
+    Fl_Multi_Value_Slider:  A special kind of slider composed of multiple
+                            segments (i.e.: like the ones used to edit
+                            color gradients in most graphical applications) 
+   
+    Fl_Pack_2D:             A widget that works like the Fl_Pack widget but can
+                            have more than one column/row of widgets, is
+                            very useful for implementing icon toolbars.
+
+Flews also contains the following helper functions and classes:
+
+   gl_image:                Converts an FLTK shared image Fl_Image into an 
+                            openGL texture, works the same way as glTexImage
+                            and converts all registered image formats of FLTK 
+                            into whatever internal ogl format you want.
+
+   Fl_Quaternion:           Quaternion handling class, allows conversions 
+                            from/to vector-angle, matrix, euler. 
+
+   fl_trackball:            includes a trackball implementation, uses the
+                            Fl_Quaternion class (defined on the same file as the
+                            quaternion class).
+   
+   fl_rotMatrixToEuler:     Receives a 4x4 rotation matrix and converts it to a
+                            set of euler angles (around axis (x,y,z)).
+
+AUTHORS
+
+   Flews was created by:
+
+      Daniel Barrero
+      <danybu@lycos.com , barrero@CERCA.UMontreal.CA>
+      http://members.tripod.com/dbarrero
+
+    See testflews.fl for an example.
+
+    A big thanks to everybody contributing to the development of Fltk, 
+    especially Bill Spitzak.
+    
+LICENSING
+
+    The sourcecode for this library is available under the terms of the same 
+    licence as the FLTK library: GNU Library General Public License (LGPL) with
+    exceptions (which means that you could actually include the code in your
+    comercial applications in any way you want as long as you don't claim the
+    flews code as yours).
+
+MODIFYING
+
+    If you modify this code, and think it might be useful for others, 
+    please let me know :-)..
+
+REPORT PROBLEMS
+    
+    If you have any problems using flews please don't hesitate to contact me:
+
+      Daniel Barrero
+      <danybu@lycos.com , barrero@CERCA.UMontreal.CA>
+      http://members.tripod.com/dbarrero
+
+
+RELATED INTERNET RESOURCES
+
+    FLTK home page (needed to use flews):
+
+        http://www.fltk.org
+
+    
+    GLUI is an interface toolkit for & based on OpenGL(tm) it can be found at:
+         
+        http://www.cs.unc.edu/~rademach/glui/
+
+    GLUI is not required for flews the link is here just for reference of the
+    original idea of a ball widget.
