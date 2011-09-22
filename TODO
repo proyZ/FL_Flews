@@ -4,5 +4,5 @@ TODO - Fl_flews Version 0.3
 - Write full documentation for the widgets in the fltk style
 - write Fl_Quaternion, fl_trackball (independant of fl_ball) + gl_image demo...
 
-Daniel Barrero <danybu@lycos.com , barrero@CERCA.UMontreal.CA>
+Daniel Barrero <daniel.barrero@gmail.com , danybu@lycos.com>
 
